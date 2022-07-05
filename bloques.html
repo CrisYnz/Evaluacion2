@@ -4,12 +4,34 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position Practice</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="bloques.css">
+
+    <script>
+        $(document).ready(function() {
+            //HTML crea un elemento html pero, borra todo lo anterior
+            $('#btn').click(function() {
+
+                $('#wrapper').html('<div id="header"></div>');
+                $('#wrapper').append('<div id="navigation"></div>');
+                $('#wrapper').append('<div id="main_content"></div>');
+
+                $('#main_content').html('<div class="subcontents"></div>');
+                $('#main_content').append('<div class="subcontents"></div>');
+                $('#main_content').append('<div class="subcontents"></div>');
+                $('#main_content').append('<div id="advertisement"></div>');
+
+            });
+        });
+    </script>
 </head>
 
 <body>
     <div id="wrapper">
-        <div id="header"></div>
+        <!--
+
+<div id="header"></div>
         <div id="navigation"></div>
         <div id="main_content">
             <div class="subcontents"></div>
@@ -17,7 +39,14 @@
             <div class="subcontents"></div>
             <div id="advertisement"></div>
         </div>
+
+        -->
+
     </div>
+    <button id="btn">Generar HTML</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>
 
 </html>
